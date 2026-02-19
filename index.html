@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="Ejemplo de manipulación de sonidos en HTML" />
 		<meta name="keywords" content="efecto, sonido, audio, mp3, wav, ogg" />
-		<meta name="author" content="Jaime Jeovanny Cortez Flores" />
+		<meta name="author" content="Marvin Raydel Rios Aguilar" />
 		<meta name="copyright" content="© 2025 JJCF" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Manipulación de flujos de sonido - Jaime Jeovanny Cortez Flores</title>
+		<title>Manipulación de flujos de sonido - Marvin Raydel Rios Aguilar</title>
 		<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2/2227.png" type="image/x-icon" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<script src="js/jquery-3.7.1.min.js"></script>
@@ -64,7 +64,89 @@
 			  </div>
 		</nav>
 		<main>
+			<div>
+				<h1>Manipulacion de audio (&lt;audio&gt;)</h1>
+				<!--<div>
+					<span>Etiqueta de audio únicamente con source</span>
+					<audio id="ejemplo1" src="media/sounds/01GroundTheme.mp3">
+						No es soportada la etiqueta "audio"
+					</audio>
+				</div>
+
+				<div>
+					<span>Etiqueta de audio con source, type</span>
+					<audio id="ejemplo2" src="media/sounds/01GroundTheme.mp3" type="audio/mp3">
+						No es soportada la etiqueta "audio"
+					</audio>
+				</div>
+
+				<div>
+					<span>Etiqueta de audio con source, type y controls</span>
+					<audio id="ejemplo3" src="media/sounds/01GroundTheme.mp3" type="audio/mp3" controls>
+						No es soportada la etiqueta "audio"
+					</audio>
+				</div>
+
+				<div>
+					<span>Etiqueta de audio con source, type, controls, autoplay y loop</span>
+					<audio id="ejemplo4" autoplay loop src="media/sounds/01GroundTheme.mp3" type="audio/mp3" controls>
+						No es soportada la etiqueta "audio"
+					</audio>
+				</div>
+
+				<div>
+					<span>Etiqueta de audio con source, type, controls, autoplay muted</span>
+					<audio id="ejemplo5" autoplay muted src="media/sounds/01GroundTheme.mp3" type="audio/mp3" controls>
+						No es soportada la etiqueta "audio"
+					</audio>
+				</div>
 			
+
+				<div>
+					<span>Etiqueta de audio con type, controls y etiqueta source</span>
+					<audio id="ejemplo6" autoplay type="audio/mp3" controls>
+						<source src="media/sounds/01GroundTheme.mp3" type="audio/mp3" />
+						<source src="media/sounds/02UndergroundTheme.mp3" type="audio/mp3" />
+						<source src="media/sounds/03UnderwaterTheme.mp3" type="audio/mp3" />
+						No es soportada la etiqueta "audio"
+					</audio>
+				</div> -->
+				
+			</div>
+
+			<div>
+				<h1>Reproductor de Marvin Raydel Rios Aguilar</h1>
+
+					<audio id="reproductor" autoplay type="audio/mp3" controls>
+					<source src="media/sounds/01GroundTheme.mp3" type="audio/mp3" />
+					No es soportada la etiqueta "audio"
+				</audio>
+
+				<button type="button" id="play" class="btn btn-primary">Reproducir</button>
+				<button type="button" id="pause" class="btn btn-primary">Pausar</button>
+
+			</div>
+
+			<script type="text/javascript">
+				window.onload = () =>{
+					const audio = document.getElementById("reproductor");
+					const play = document.getElementById("play");
+					const pause = document.getElementById("pause");
+
+					play.onclick = PlayAudio();
+					pause.onclick = PauseAudio();
+
+					function PlayAudio(){
+						audio.play();
+					}
+
+					function PauseAudio(){
+						audio.pause();
+					}
+				}
+			</script>
+
+
 		</main>
 	</body>
 </html>
