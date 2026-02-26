@@ -142,13 +142,13 @@
 			<script type="text/javascript">
 
 				const sounds = {
-					'KeyW':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom1.ogg',
-					'KeyA':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom2.ogg',
-					'KeyS':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom3.ogg',
-					'KeyD':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/pad1.ogg',
-					'KeyJ':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/snare1.ogg',
-					'KeyK':'https://virtualdrumming.com/drums/virtual-drum-sounds/crash1.ogg',
-					'KeyL':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/kick.ogg',
+					'keyW':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom1.ogg',
+					'keyA':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom2.ogg',
+					'keyS':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom3.ogg',
+					'keyD':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/pad1.ogg',
+					'keyJ':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/snare1.ogg',
+					'keyK':'https://virtualdrumming.com/drums/virtual-drum-sounds/crash1.ogg',
+					'keyL':'https://virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/kik.ogg',
 				}
 
 				// Método para la ejecución del audio
@@ -168,8 +168,12 @@
 				window.addEventListener('keypress', function(e){
 					console.log(e.code);
 
-					if(sounds[e.code]){
+					var s = e.code;
+					var r = s.charAt(0).toLowerCase() + s.slice(1);
+					
+					if(sounds[r]){
 						console.log("Ha presionado la tecla ", e.code);
+						play(sounds[r]);
 					}
 				})
 
